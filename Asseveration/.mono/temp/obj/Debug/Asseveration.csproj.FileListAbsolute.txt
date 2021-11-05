@@ -1,0 +1,8 @@
+C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\bin\Debug\Asseveration.dll
+C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\bin\Debug\Asseveration.pdb
+C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.AssemblyInfoInputs.cache
+C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.AssemblyInfo.cs
+C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.csproj.CoreCompileInputs.cache
+C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.dll
+C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.pdb
