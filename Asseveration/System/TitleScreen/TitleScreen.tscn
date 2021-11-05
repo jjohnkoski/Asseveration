@@ -1,8 +1,60 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Fonts/aquire-43735/Aquire-BW0ox.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Images/BlackBackground.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Images/TitleScreenImage.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 76
+font_data = ExtResource( 1 )
 
 [node name="TitleScreen" type="MarginContainer"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 1366.0
+margin_bottom = 768.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TitleImageContainer" type="MarginContainer" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 80.0
+margin_right = -80.0
+margin_bottom = -338.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TitleImage" type="TextureRect" parent="Background/TitleImageContainer"]
+margin_right = 1206.0
+margin_bottom = 350.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TitleText" type="Label" parent="Background/TitleImageContainer"]
+margin_top = 141.0
+margin_right = 1206.0
+margin_bottom = 209.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.415686, 0.733333, 0.682353, 1 )
+text = "ASSEVERATION"
+align = 1
+__meta__ = {
+"_edit_lock_": true
 }

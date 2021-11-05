@@ -1,0 +1,14 @@
+Tools:
+Godot
+Aseprite
+Visual Studio
+
+Websites:
+fontspace.com
+
+Resources:
+Aquire font by Sesohq
+
+Thanks:
+Norman Henson
+Sesohq - for free font sesohq.com
