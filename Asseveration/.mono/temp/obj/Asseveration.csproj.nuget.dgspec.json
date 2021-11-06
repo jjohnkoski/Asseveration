@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jjpen\\repos\\games\\Asseveration\\Asseveration\\Asseveration.csproj": {}
+    "C:\\USERS\\JJPEN\\REPOS\\GAMES\\ASSEVERATION\\ASSEVERATION\\Asseveration.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jjpen\\repos\\games\\Asseveration\\Asseveration\\Asseveration.csproj": {
+    "C:\\USERS\\JJPEN\\REPOS\\GAMES\\ASSEVERATION\\ASSEVERATION\\Asseveration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jjpen\\repos\\games\\Asseveration\\Asseveration\\Asseveration.csproj",
+        "projectUniqueName": "C:\\USERS\\JJPEN\\REPOS\\GAMES\\ASSEVERATION\\ASSEVERATION\\Asseveration.csproj",
         "projectName": "Asseveration",
-        "projectPath": "C:\\Users\\jjpen\\repos\\games\\Asseveration\\Asseveration\\Asseveration.csproj",
+        "projectPath": "C:\\USERS\\JJPEN\\REPOS\\GAMES\\ASSEVERATION\\ASSEVERATION\\Asseveration.csproj",
         "packagesPath": "C:\\Users\\jjpen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jjpen\\repos\\games\\Asseveration\\Asseveration\\.mono\\temp\\obj\\",
+        "outputPath": "C:\\USERS\\JJPEN\\REPOS\\GAMES\\ASSEVERATION\\ASSEVERATION\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
