@@ -6,3 +6,4 @@ C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseve
 C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.csproj.CoreCompileInputs.cache
 C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.dll
 C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.pdb
+C:\Users\jjpen\repos\games\Asseveration\Asseveration\.mono\temp\obj\Debug\Asseveration.csproj.AssemblyReference.cache
