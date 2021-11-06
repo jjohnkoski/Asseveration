@@ -128,3 +128,6 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Background/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="Background/LoadGameButton" to="." method="_on_LoadGameButton_pressed"]
+[connection signal="pressed" from="Background/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="Background/CreditsButton" to="." method="_on_CreditsButton_pressed"]

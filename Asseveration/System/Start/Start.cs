@@ -12,4 +12,19 @@ public class Start : Node2D
     {
         
     }
+
+    public void LoadGame()
+    {
+        
+    }
+
+    public void OpenOptions()
+    {
+
+    }
+
+    public void OpenCredits()
+    {
+
+    }
 }

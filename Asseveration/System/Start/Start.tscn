@@ -10,4 +10,7 @@ script = ExtResource( 2 )
 
 [node name="TitleScreen" parent="CanvasLayer" instance=ExtResource( 1 )]
 
+[connection signal="LoadGame" from="CanvasLayer/TitleScreen" to="." method="LoadGame"]
+[connection signal="OpenCredits" from="CanvasLayer/TitleScreen" to="." method="OpenCredits"]
+[connection signal="OpenOptions" from="CanvasLayer/TitleScreen" to="." method="OpenOptions"]
 [connection signal="StartNewGame" from="CanvasLayer/TitleScreen" to="." method="StartNewGame"]
