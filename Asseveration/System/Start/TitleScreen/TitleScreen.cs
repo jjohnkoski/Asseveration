@@ -11,6 +11,8 @@ public class TitleScreen : MarginContainer
     [Signal]
     public delegate void OpenCredits();
     [Signal]
+    public delegate void ExitGame();
+    [Signal]
     public delegate void PlaySelectedTrack(string fileName);
 
     public override void _Ready()
@@ -41,5 +43,10 @@ public class TitleScreen : MarginContainer
     public void _on_CreditsButton_pressed()
     {
         EmitSignal("OpenCredits");
+    }
+
+    public void _on_ExitGameButton_pressed()
+    {
+        EmitSignal("ExitGame");
     }
 }

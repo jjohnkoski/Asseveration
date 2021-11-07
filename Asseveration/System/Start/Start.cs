@@ -27,4 +27,9 @@ public class Start : Node2D
     {
 
     }
+
+    public void ExitGame()
+    {
+        GetTree().Quit();
+    }
 }

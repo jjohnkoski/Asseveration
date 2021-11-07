@@ -10,8 +10,8 @@ script = ExtResource( 2 )
 
 [node name="TitleScreen" parent="MainLayer" instance=ExtResource( 1 )]
 
+[connection signal="ExitGame" from="MainLayer/TitleScreen" to="." method="ExitGame"]
 [connection signal="LoadGame" from="MainLayer/TitleScreen" to="." method="LoadGame"]
 [connection signal="OpenCredits" from="MainLayer/TitleScreen" to="." method="OpenCredits"]
 [connection signal="OpenOptions" from="MainLayer/TitleScreen" to="." method="OpenOptions"]
-[connection signal="PlaySelectedTrack" from="MainLayer/TitleScreen" to="MainLayer/TitleScreen/MusicPlayer" method="PlaySelectedTrack"]
 [connection signal="StartNewGame" from="MainLayer/TitleScreen" to="." method="StartNewGame"]

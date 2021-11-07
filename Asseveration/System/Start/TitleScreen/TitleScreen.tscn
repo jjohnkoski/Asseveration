@@ -128,6 +128,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ExitGameButton" type="Button" parent="Background"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -106.982
+margin_top = -87.0
+margin_right = 103.393
+margin_bottom = -54.0
+theme = ExtResource( 4 )
+text = "exit game"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="MusicPlayer" parent="." instance=ExtResource( 6 )]
 
 [connection signal="PlaySelectedTrack" from="." to="MusicPlayer" method="PlaySelectedTrack"]
@@ -135,3 +151,4 @@ __meta__ = {
 [connection signal="pressed" from="Background/LoadGameButton" to="." method="_on_LoadGameButton_pressed"]
 [connection signal="pressed" from="Background/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="Background/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="Background/ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
