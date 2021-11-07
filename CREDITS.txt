@@ -3,7 +3,7 @@ Godot
 Aseprite
 Visual Studio
 GIMP
-Waveform Free
+Ableton Live Lite 11
 
 Resources:
 Aquire font by Sesohq
