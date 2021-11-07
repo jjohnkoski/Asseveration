@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Fonts/aquire-43735/Aquire-BW0ox.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Images/BlackBackground.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Images/TitleScreenImage.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Themes/MenuTheme.tres" type="Theme" id=4]
 [ext_resource path="res://System/Start/TitleScreen/TitleScreen.cs" type="Script" id=5]
+[ext_resource path="res://System/Music/MusicPlayer.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 76
@@ -127,6 +128,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="MusicPlayer" parent="." instance=ExtResource( 6 )]
+
+[connection signal="PlaySelectedTrack" from="." to="MusicPlayer" method="PlaySelectedTrack"]
 [connection signal="pressed" from="Background/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="Background/LoadGameButton" to="." method="_on_LoadGameButton_pressed"]
 [connection signal="pressed" from="Background/OptionsButton" to="." method="_on_OptionsButton_pressed"]

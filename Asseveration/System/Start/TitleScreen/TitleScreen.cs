@@ -10,10 +10,17 @@ public class TitleScreen : MarginContainer
     public delegate void OpenOptions();
     [Signal]
     public delegate void OpenCredits();
+    [Signal]
+    public delegate void PlaySelectedTrack(string fileName);
 
     public override void _Ready()
     {
-        
+        PlayTitleMusic();
+    }
+
+    public void PlayTitleMusic()
+    {
+        EmitSignal("PlaySelectedTrack", "Asseveration.wav");
     }
 
     public void _on_NewGameButton_pressed()

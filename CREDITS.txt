@@ -3,13 +3,13 @@ Godot
 Aseprite
 Visual Studio
 GIMP
-
-Websites:
-fontspace.com
+Waveform Free
 
 Resources:
 Aquire font by Sesohq
+RandArp plugin
 
 Thanks:
-Norman Henson
-Sesohq - for free font sesohq.com
+Norman Henson - <github>
+Sesohq - for free font - sesohq.com
+code4n42 - for audio plugins - code4n42.com
