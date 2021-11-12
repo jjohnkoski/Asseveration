@@ -4,12 +4,8 @@ Aseprite
 Visual Studio
 GIMP
 Ableton Live Lite 11
-
-Resources:
-Aquire font by Sesohq
-RandArp plugin
+Audacity
 
 Thanks:
 Norman Henson - <github>
 Sesohq - for free font - sesohq.com
-code4n42 - for audio plugins - code4n42.com
