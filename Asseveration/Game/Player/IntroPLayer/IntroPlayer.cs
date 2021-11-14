@@ -23,26 +23,25 @@ public class IntroPlayer : Player
         {
             _velocity.x -= Speed;
         }
-
-        if (Input.IsActionPressed("ui_up") && IsOnFloor())
+        if (Input.IsActionPressed("ui_up"))
         {
-            _velocity.y = -JumpSpeed;
+            _velocity.y -= Speed;
+        }
+        if (Input.IsActionPressed("ui_down"))
+        {
+            _velocity.y += Speed;
         }
 
         _velocity = MoveAndSlide(_velocity, Vector2.Up);
 
-        //if (_velocity.x != 0)
-        //{
-        //    sprite.Animation = "walk";
-        //    sprite.FlipV = false;
-        //    sprite.FlipH = _velocity.x < 0;
-        //    sprite.Play("walk");
-        //}
-        //else if (_velocity.y < 0)
-        //{
-        //    sprite.Play("jump");
-        //}
-        if (_velocity.x == 0 && _velocity.y == 0)
+        if (_velocity.x != 0)
+        {
+            sprite.Animation = "forward";
+            sprite.FlipV = false;
+            sprite.FlipH = _velocity.x < 0;
+            sprite.Play("forward");
+        }
+        else
         {
             sprite.Play("idle");
         }
