@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Sprites/Player/Ending Player/Mech Suit Idle 1.png" type="Texture" id=1]
+[ext_resource path="res://Game/Player/IntroPLayer/IntroPlayer.cs" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/Player/Ending Player/Mech Suit Idle 3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Player/Ending Player/Mech Suit Idle 2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/Player/Ending Player/Mech Suit Idle 5.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/Player/Ending Player/Mech Suit Idle 4.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[node name="IntroPlayer" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="IntroPlayerSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 321.378, 435.516 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 353.607, 395.251, 337.697, 387.473, 320.019, 396.665, 335.222, 407.272, 323.908, 418.939, 317.898, 428.485, 316.484, 453.234, 320.373, 454.294, 335.222, 446.516, 335.222, 434.142, 330.626, 430.606, 330.979, 421.767, 341.232, 415.757, 347.596, 416.818, 347.596, 425.303, 343.707, 430.606, 343, 437.324, 350.425, 439.091, 350.778, 453.941, 344.414, 457.476, 343.707, 474.093, 347.596, 482.932, 339.465, 489.65, 360.324, 509.095, 375.173, 502.378, 375.173, 499.549, 357.496, 485.76, 357.496, 481.164, 361.031, 480.457, 361.738, 459.951, 363.506, 458.89, 365.981, 447.223, 363.506, 444.748, 361.738, 442.981, 360.678, 433.435, 368.809, 431.667, 370.224, 424.242, 364.213, 423.889, 364.213, 417.878, 368.102, 417.878, 369.517, 394.897 )
