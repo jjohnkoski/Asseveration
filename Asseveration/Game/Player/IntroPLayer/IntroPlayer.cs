@@ -3,15 +3,10 @@ using Godot;
 
 public class IntroPlayer : Player
 {
-    [Export]
-    public int Speed = 1000;
-    [Export]
-    public int JumpSpeed = 550;
-
-    private Vector2 _velocity = Vector2.Zero;
+    
     public override void _Ready()
     {
-        
+        Speed = 1300;
     }
 
     public override void _Process(float delta)
