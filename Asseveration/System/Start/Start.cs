@@ -9,7 +9,7 @@ public class Start : Node2D
 
     public void StartNewGame()
     {
-        GetTree().ChangeScene("res://Game/Intro/Intro.tscn");
+        GetTree().ChangeScene("res://Game/Levels/Intro/Intro.tscn");
     }
 
     public void LoadGame()
