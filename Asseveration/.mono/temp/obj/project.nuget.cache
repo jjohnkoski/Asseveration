@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "MbKC4fXTG+Sah4Xz8PFE4OiLkCEewvZUiOId+IXLQSCjSDIzQ5yDLKUQAdOU7KOj4kD6NwU8j//6wuVFd3r6vw==",
+  "dgSpecHash": "/BPVtD9kRK4oVbhBBmQ8w5Z9G7PAzJ9VwPHFnuiSXX1vflv+39r80QjQUtYLB/hDeHlAfhNnSa54G/BnNOlPZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jjpen\\repos\\games\\Asseveration\\Asseveration\\Asseveration.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jjpen\\.nuget\\packages\\ninject\\3.3.4\\ninject.3.3.4.nupkg.sha512",
+    "C:\\Users\\jjpen\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }
