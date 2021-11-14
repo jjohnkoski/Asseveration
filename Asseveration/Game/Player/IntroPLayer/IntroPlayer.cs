@@ -56,7 +56,5 @@ public class IntroPlayer : Player
         }
 
         HandlePlayerHitboxes();
-        GD.Print($"Idle: {IdleHitbox.Disabled}");
-        GD.Print($"Forward: {ForwardHitbox.Disabled}");
     }
 }
