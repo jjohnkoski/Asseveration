@@ -1,9 +1,8 @@
-using Asseveration.Game.Player;
+using Asseveration.Game.MechPlayer;
 using Asseveration.Repositories;
 using Godot;
-using System;
 
-public class IntroPlayer : Player
+public class IntroMechPlayer : MechPlayer
 {
     public override void _Ready()
     {

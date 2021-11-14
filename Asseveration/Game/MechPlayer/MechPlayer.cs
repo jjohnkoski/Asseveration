@@ -1,8 +1,8 @@
-﻿using Asseveration.Repositories;
-using Godot;
-namespace Asseveration.Game.Player 
+﻿using Godot;
+
+namespace Asseveration.Game.MechPlayer 
 {
-    public class Player : KinematicBody2D
+    public class MechPlayer : KinematicBody2D
     {
         [Export]
         public int Speed = 100;
