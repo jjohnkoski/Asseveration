@@ -1,59 +1,50 @@
 using Asseveration.Game.MechPlayer;
+using Asseveration.Game.Weapons.Weapon_Accessories;
 using Asseveration.Repositories;
 using Godot;
 
 public class IntroMechPlayer : MechPlayer
 {
+    [Export]
+    public PackedScene PhaserBurst;
+
+    private AnimatedSprite _sprite;
+    private Area2D _burst;
+    private MechPhaserMuzzle _phaserMuzzle;
+
     public override void _Ready()
     {
         Speed = 1300;
+        BurstDelay = (float) 0.1;
         IdleHitbox = GetNode<CollisionPolygon2D>("IdleHitbox");
         ForwardHitbox = GetNode<CollisionPolygon2D>("ForwardHitbox");
+        PhaserCooldown = GetNode<Timer>("PhaserCooldown");
+        PhaserBurst = GD.Load<PackedScene>("res://Game/Weapons/MechProjectiles/IntroMech/IntroMechPhaserBurst.tscn");
+        _sprite = GetNode<AnimatedSprite>("IntroPlayerSprite");
+        _phaserMuzzle = new MechPhaserMuzzle
+        {
+            IdleXPositivePosition = new Vector2(100, 0),
+            IdleXNegativePosition = new Vector2(-50, 0),
+            MovingXPositivePosition = new Vector2(250, -55),
+            MovingXNegativePosition = new Vector2(-185, -55)
+        };
     }
 
     public override void _Process(float delta)
-    {        
-        AnimatedSprite sprite = GetNode<AnimatedSprite>("IntroPlayerSprite");
-        _velocity.x = 0;
-        _velocity.y = 0;
+    {
+        HandleMovement(_sprite);
 
-        // When the player is instantiated, all hitboxes are disabled by default.
-        // Changes animations takes on the responsibility of activating hitboxes dynamically.
-        HitboxRepository.DisableAllHitboxes(this);
+        if (Input.IsActionPressed("ui_select") && PhaserCooldown.IsStopped())
+        {
+            FireIntroMechPhaser();
+        }
+    }
 
-        if (Input.IsActionPressed("ui_right"))
-        {
-            _velocity.x += Speed;
-        }
-        if (Input.IsActionPressed("ui_left"))
-        {
-            _velocity.x -= Speed;
-        }
-        if (Input.IsActionPressed("ui_up"))
-        {
-            _velocity.y -= Speed;
-        }
-        if (Input.IsActionPressed("ui_down"))
-        {
-            _velocity.y += Speed;
-        }
-
-        _velocity = MoveAndSlide(_velocity, Vector2.Up);
-
-        if (_velocity.x != 0 || _velocity.y != 0)
-        {
-            sprite.Animation = "forward";
-            sprite.FlipV = false;
-            sprite.FlipH = _velocity.x < 0;
-            sprite.Play("forward");
-            HitboxRepository.EnableHitbox(ForwardHitbox);
-        }
-        else
-        {
-            sprite.Play("idle");
-            HitboxRepository.EnableHitbox(IdleHitbox);
-        }
-
-        HandlePlayerHitboxes();
+    private void FireIntroMechPhaser()
+    {
+        _burst = (Area2D)PhaserBurst.Instance();        
+        AddChild(_burst);
+        _burst.Position += PhaserRepository.SetPhaserMuzzlePosition(_sprite, _phaserMuzzle);
+        FirePhaser(_burst, _sprite);
     }
 }

@@ -16,7 +16,6 @@ anchor_bottom = 1.0
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -36,9 +35,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="IntroMechPlayer" parent="MainLayer" instance=ExtResource( 4 )]
-z_index = 1
+[node name="IntroMechPlayer" parent="MainLayer/Background" instance=ExtResource( 4 )]
 
 [node name="MusicPlayer" parent="." instance=ExtResource( 3 )]
 
 [connection signal="PlaySelectedTrack" from="." to="MusicPlayer" method="PlaySelectedTrack"]
+
+[editable path="MainLayer/Background/IntroMechPlayer"]

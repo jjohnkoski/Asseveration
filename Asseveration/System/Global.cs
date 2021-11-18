@@ -7,6 +7,6 @@ namespace Asseveration.System
         // Level List:
         // 0 = Title
         // 1 = Intro
-        int currentStage = 0;
+        public int CurrentStage = 0;
     }
 }

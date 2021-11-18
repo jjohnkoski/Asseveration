@@ -1,10 +1,11 @@
 using Godot;
-using System;
 
 public class Intro : Node2D
 {
+
     [Signal]
     public delegate void PlaySelectedTrack(string fileName);
+    
     public override void _Ready()
     {
         PlayIntroMusic();

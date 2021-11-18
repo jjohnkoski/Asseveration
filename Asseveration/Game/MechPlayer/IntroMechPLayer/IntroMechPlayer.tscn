@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Sprites/Player/Ending Player/Mech Suit Idle 3.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/Player/Ending Player/Mech Suit Idle 2.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/Sprites/Player/Ending Player/Mech Suit Forward 1.PNG" type="Texture" id=7]
 [ext_resource path="res://Assets/Sprites/Player/Ending Player/Mech Suit Idle 1.png" type="Texture" id=8]
 [ext_resource path="res://Game/MechPlayer/IntroMechPLayer/IntroMechPlayer.cs" type="Script" id=9]
+[ext_resource path="res://Game/Weapons/MechProjectiles/IntroMech/IntroMechPhaserBurst.tscn" type="PackedScene" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -20,17 +21,18 @@ animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "forward",
-"speed": 5.0
+"speed": 2.0
 } ]
 
 [node name="IntroMechPlayer" type="KinematicBody2D"]
+position = Vector2( -2.51984, 5.03967 )
 script = ExtResource( 9 )
 
 [node name="IntroPlayerSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 697.357, 401.194 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-animation = "forward"
+animation = "idle"
 
 [node name="IdleHitbox" type="CollisionPolygon2D" parent="."]
 visible = false
@@ -40,3 +42,9 @@ polygon = PoolVector2Array( 363.475, 509.105, 338.275, 492.04, 345.418, 484.103,
 [node name="ForwardHitbox" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PoolVector2Array( 780.685, 352.375, 782.073, 363.685, 772.747, 363.883, 757.667, 371.82, 762.231, 378.17, 753.5, 385.908, 735.642, 387.099, 723.141, 398.806, 721.951, 406.941, 719.768, 409.323, 692.584, 407.735, 670.559, 399.997, 669.17, 413.886, 672.344, 416.664, 683.456, 418.252, 685.639, 419.641, 708.458, 419.839, 710.442, 417.061, 725.522, 416.466, 728.697, 413.291, 733.261, 412.894, 732.269, 422.022, 720.959, 431.745, 721.157, 437.697, 719.768, 439.483, 704.886, 440.475, 712.228, 468.85, 715.403, 471.827, 725.125, 473.811, 727.903, 470.041, 744.174, 467.263, 749.135, 470.834, 754.492, 473.414, 760.048, 474.604, 762.429, 470.041, 761.04, 449.801, 763.62, 448.016, 791.995, 426.982, 789.018, 414.878, 781.081, 404.759, 779.692, 399.997, 794.574, 385.908, 795.963, 379.559, 802.71, 378.964, 804.892, 382.337, 819.576, 390.671, 828.307, 391.067, 829.1, 388.091, 837.831, 388.29, 829.497, 369.638, 816.798, 370.828, 816.004, 373.804, 796.162, 372.415, 795.963, 369.042, 800.725, 366.066, 799.535, 362.296, 793.582, 357.732, 785.447, 357.335 )
+
+[node name="IntroMechPhaserBurst" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[node name="PhaserCooldown" type="Timer" parent="."]
+one_shot = true
