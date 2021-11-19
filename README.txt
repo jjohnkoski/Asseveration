@@ -4,10 +4,12 @@ Asseveration
 
 /**********\
 
-A 2D Platformer/Bullet-hell RPG focusing on a choice impacted story.
+A 2D platformer/shooter/bullet-hell RPG PC game.
 
 Author: Jacob "Zel" Johnkoski
 License: MIT
 
-Progress Log and Notes
-**********************
+Stories are planned on hacknPlan, and branches are created based on 
+story numbers.
+
+hacknPlan board link: https://app.hacknplan.com/p/157603/kanban?categoryId=0&boardId=420586
