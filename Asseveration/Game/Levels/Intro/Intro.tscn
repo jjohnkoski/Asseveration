@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Assets/Images/BlackBackground.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/Backgrounds/Intro level Background 1.png" type="Texture" id=1]
 [ext_resource path="res://Game/Levels/Intro/Intro.cs" type="Script" id=2]
 [ext_resource path="res://System/Music/MusicPlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/MechPlayer/IntroMechPLayer/IntroMechPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Sprites/Backgrounds/Intro level Background 2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/Backgrounds/Intro level Background 3.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.0
+} ]
 
 [node name="Intro" type="Node2D"]
 script = ExtResource( 2 )
@@ -13,27 +23,17 @@ script = ExtResource( 2 )
 [node name="Background" type="TextureRect" parent="MainLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 1 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TestLabel" type="Label" parent="MainLayer/Background"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -85.0
-margin_top = -48.0
-margin_right = 58.0
-margin_bottom = 13.0
-custom_colors/font_color = Color( 0.952941, 0.913725, 0.913725, 1 )
-text = "THIS IS A TEST LABEL"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="SpaceBackground" type="AnimatedSprite" parent="MainLayer/Background"]
+position = Vector2( 682.457, 381.637 )
+scale = Vector2( 0.435147, 0.459591 )
+frames = SubResource( 1 )
+animation = "idle"
+playing = true
 
 [node name="IntroMechPlayer" parent="MainLayer/Background" instance=ExtResource( 4 )]
 
