@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Sprites/Backgrounds/Intro level Background 1.png" type="Texture" id=1]
 [ext_resource path="res://Game/Levels/Intro/Intro.cs" type="Script" id=2]
@@ -6,6 +6,12 @@
 [ext_resource path="res://Game/MechPlayer/IntroMechPLayer/IntroMechPlayer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Sprites/Backgrounds/Intro level Background 2.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Sprites/Backgrounds/Intro level Background 3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/Ships/Intro Level Spaceship 5.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/Ships/Intro Level Spaceship 1.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/Ships/Intro Level Spaceship 3.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/Ships/Intro Level Spaceship 2.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/Ships/Intro Level Spaceship 4.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/Ships/Intro Level Spaceship 6.png" type="Texture" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -13,6 +19,14 @@ animations = [ {
 "loop": true,
 "name": "idle",
 "speed": 1.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
 } ]
 
 [node name="Intro" type="Node2D"]
@@ -33,6 +47,15 @@ position = Vector2( 682.457, 381.637 )
 scale = Vector2( 0.435147, 0.459591 )
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
+playing = true
+
+[node name="Starship" type="AnimatedSprite" parent="MainLayer/Background"]
+position = Vector2( 993.534, 281.503 )
+scale = Vector2( 0.25, 0.25 )
+frames = SubResource( 2 )
+animation = "idle"
+frame = 5
 playing = true
 
 [node name="IntroMechPlayer" parent="MainLayer/Background" instance=ExtResource( 4 )]
