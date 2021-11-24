@@ -17,6 +17,7 @@ public class TitleScreen : MarginContainer
 
     public override void _Ready()
     {
+        OS.WindowFullscreen = true;
         PlayTitleMusic();
     }
 
