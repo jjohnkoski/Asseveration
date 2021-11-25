@@ -37,11 +37,6 @@ public class IntroMechPlayer : MechPlayer
 
     public override void _Process(float delta)
     {
-        if (_sprite.GlobalPosition.x > _finalSpritePosition.x - 10)
-        {
-            _isEntranceMovementTriggered = false;
-        }
-
         if (_isEntranceMovementTriggered)
         {
             HandleEntranceMovement();
@@ -64,11 +59,19 @@ public class IntroMechPlayer : MechPlayer
 
     private void HandleEntranceMovement()
     {
-        _velocity.x = 0;
-        _sprite.Animation = "forward";
-        _sprite.Play("forward");
-        _velocity.x += Speed;
-        _velocity = MoveAndSlide(_velocity, Vector2.Up);
+        if (_sprite.GlobalPosition.x > _finalSpritePosition.x - 10)
+        {
+            _isEntranceMovementTriggered = false;
+            _sprite.GlobalPosition = _finalSpritePosition;
+        }
+        else
+        {
+            _velocity.x = 0;
+            _sprite.Animation = "forward";
+            _sprite.Play("forward");
+            _velocity.x += Speed;
+            _velocity = MoveAndSlide(_velocity, Vector2.Up);
+        }        
     }
 
     private void FireIntroMechPhaser()
