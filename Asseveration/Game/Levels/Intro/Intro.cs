@@ -5,16 +5,20 @@ public class Intro : Node2D
 
     [Signal]
     public delegate void PlaySelectedTrack(string fileName);
+    [Signal]
+    public delegate void HandleCutSceneEntrance();
+
     public Timer ExplosionTimer;
 
     private AnimatedSprite _shipSprite;
-    private bool isShipExploding;
-    
+    private bool _isShipFlying = true;
+
     public override void _Ready()
     {
         ExplosionTimer = GetNode<Timer>("ExplosionTimer");
+        _shipSprite = GetNode<AnimatedSprite>("MainLayer/Background/Starship");
         ExplosionTimer.WaitTime = 11;
-        isShipExploding = false;
+
         StartShip();
         PlayIntroMusic();
     }
@@ -22,21 +26,23 @@ public class Intro : Node2D
     public override void _Process(float delta)
     {
         base._Process(delta);
-        if (ExplosionTimer.IsStopped())
-        {
-            isShipExploding = true;
-        }
 
-        if (isShipExploding)
+        if (ExplosionTimer.IsStopped() && _isShipFlying)
         {
-            _shipSprite.Play("explosion");
+            ExplodeShip();
         }
     }
 
     private void StartShip()
     {
-        _shipSprite = GetNode<AnimatedSprite>("MainLayer/Background/Starship");
         _shipSprite.Play("idle");
+    }
+
+    private void ExplodeShip()
+    {
+        _isShipFlying = false;
+        _shipSprite.Play("explosion");
+        EmitSignal("HandleCutSceneEntrance");
     }
 
     private void PlayIntroMusic()
