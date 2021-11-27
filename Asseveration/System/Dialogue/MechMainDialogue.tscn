@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Images/DialogueScreenDimmingOverlay.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Images/Mech Dialogue Box.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/aquire-43735/Aquire-BW0ox.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/Fonts/aquire-43735/AquireLight-YzE0o.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://System/Dialogue/MechMainDialogue/MechMainDialogue.cs" type="Script" id=5]
 
 [sub_resource type="Theme" id=1]
 
@@ -12,7 +13,7 @@ size = 90
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 36
+size = 60
 font_data = ExtResource( 4 )
 
 [node name="DimmingOverlay" type="TextureRect"]
@@ -20,6 +21,7 @@ margin_right = 1800.0
 margin_bottom = 1000.0
 rect_scale = Vector2( 0.77, 0.77 )
 texture = ExtResource( 1 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -43,18 +45,17 @@ margin_bottom = 156.0
 theme = SubResource( 1 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.270588, 0.717647, 0.521569, 1 )
-text = "NAME> zel"
 valign = 1
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TextureRect"]
-margin_left = 3923.71
-margin_top = -11.6113
-margin_right = 4172.71
-margin_bottom = 86.3887
+[node name="CatworksLabel" type="Label" parent="TextureRect"]
+margin_left = 3718.01
+margin_top = 104.697
+margin_right = 4096.01
+margin_bottom = 231.697
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "CWDDS V6.1.6"
