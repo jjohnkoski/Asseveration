@@ -16,7 +16,7 @@ font_data = ExtResource( 3 )
 size = 60
 font_data = ExtResource( 4 )
 
-[node name="DimmingOverlay" type="TextureRect"]
+[node name="DialogueOverlay" type="TextureRect"]
 margin_right = 1800.0
 margin_bottom = 1000.0
 rect_scale = Vector2( 0.77, 0.77 )
